@@ -1,75 +1,334 @@
-.btn-group-vertical > .btn:first-child:not(:last-child){
-    border-top-left-radius: 0px;
+// .btn-group-vertical > .btn:first-child:not(:last-child){
+//     border-top-left-radius: 0px;
+// }
+// .btn-group-vertical > .btn:last-child:not(:first-child) {
+//     border-bottom-right-radius: 0px;
+// }
+// .modal-dialog.modal-content.modal-dialog-container.react-draggable{
+//     position: fixed;
+//     z-index: 100000 !important;
+// }
+// .gfi-t {
+//     float: left;
+//     padding: 1px
+// }
+// .fill:not(:-webkit-full-screen){
+//     .notifications-tc, .notifications-tl, .notifications-tr {
+//         top: 63px !important;
+//     }
+// }
+// .catalog-panel > .panel-body form{
+//      .form-group:first-child,
+//      .form-group:first-child + .form-group {
+//          display: none
+//      }
+// }
+// .notifications-tc, .notifications-tl, .notifications-tr {
+//     top: 10px !important;
+// }
+//
+// .mapstore2-embedded {
+//     .background-plugin-position {
+//         position: @geo-bottom-tools-position;
+//     }
+//     .mapToolbar {
+//         position: @geo-bottom-tools-position;
+//     }
+// }
+// .timeline-plugin {
+//     position: fixed !important;
+// }
+// #mapstore-print-panel.modal-dialog,
+// #measure-dialog,
+// #mapstore-about {
+//     height: 400px;
+//     width: 800px;
+//     position: absolute;
+// }
+// #mapstore-print-panel .modal-body {
+//     max-height: ~"calc(100vh - 190px)";
+//     overflow-y: auto;
+//     position: relative;
+//     width: 100%;
+//     height: ~"calc(100% - 52px)";
+// }
+// .print-map-preview #print_preview {
+//     margin: auto;
+// }
+//
+// @media (max-width: 991px) {
+//     #mapstore-print-panel.modal-dialog,
+//     #measure-dialog,
+//     #mapstore-about {
+//         width: 700px;
+//     }
+// }
+//
+// @media (max-width: 767px) {
+//     #mapstore-print-panel.modal-dialog,
+//     #measure-dialog,
+//     #mapstore-about {
+//         width: 98%;
+//     }
+// }
+//
+// // .btn{
+// //     background-color: green
+// // }
+//
+//
+// .panel-body{
+//     background-image: radial-gradient(closest-side, #f9f586 0%, #96fbc4 100%) !important;;
+// }
+// .msSideGrid ,.mapstore-side-preview,.mapstore-side-card-right-container,.container-fluid
+// ,.ms-legend-container
+// ,.mapstore-side-card-info
+// ,.mapstore-side-card-title,.panel-footer,#ms-legend-action
+// ,.nav-content
+// ,#mapstore-layers,.toc-default-group
+// ,.toc-default-layer-head,.toc-group-title,.toc-default-group-head
+// ,.react-swipeable-view-container,.searchInput,.input-group
+// ,.menuitem,.dropdown-menu,.dropdown-menu-right
+// ,#search-services-config-editor .modal-footer
+// ,#search-services-config-editor .modal-body
+// ,#mapstore-map-footer #mapstore-map-footer-container
+// ,.search-result-list .search-result
+// ,#mapstore-settings .modal-body
+// ,.ms2-border-layout-content
+// ,.ms-header .ms-row-tab .active
+//
+// {
+//     background-color: #9b92fc;
+//     // background-image: linear-gradient(to bottom, #96fbc4 0%, #f9f586 100%)!important;
+// }
+//
+// .navHeader ,.btn-primary ,.btn,.dropdown-menu-right  .dropdown-header
+//
+// ,#search-services-config-editor .modal-header,
+// #wms-styler-dialog .modal-header,
+// #mapstore-settings .modal-header
+// ,.ms-header .row
+// ,.square-button
+// ,.mapstore-flex-container .m-header
+// {
+//     background-color: #3a5ad8;
+//     // background-image: linear-gradient(to top, #96fbc4 0%, #03ba58 100%) !important;
+// }
+
+
+
+
+.check
+{
+    opacity:0.5;
+	color:#996;
 }
-.btn-group-vertical > .btn:last-child:not(:first-child) {
-    border-bottom-right-radius: 0px;
-}
-.modal-dialog.modal-content.modal-dialog-container.react-draggable{
-    position: fixed;
-    z-index: 100000 !important;
-}
-.gfi-t {
-    float: left;
-    padding: 1px
-}
-.fill:not(:-webkit-full-screen){
-    .notifications-tc, .notifications-tl, .notifications-tr {
-        top: 63px !important;
-    }
-}
-.catalog-panel > .panel-body form{
-     .form-group:first-child,
-     .form-group:first-child + .form-group {
-         display: none
-     }
-}
-.notifications-tc, .notifications-tl, .notifications-tr {
-    top: 0px !important;
+.box{
+    margin-bottom:5px;
 }
 
-.mapstore2-embedded {
-    .background-plugin-position {
-        position: @geo-bottom-tools-position;
-    }
-    .mapToolbar {
-        position: @geo-bottom-tools-position;
-    }
+body {
+    background-color: #f0f0f0;
 }
-.timeline-plugin {
-    position: fixed !important;
+
+body.edit-mode {
+    padding-top: 60px;
 }
-#mapstore-print-panel.modal-dialog,
-#measure-dialog,
-#mapstore-about {
-    height: 400px;
-    width: 800px;
-    position: absolute;
+
+.btn,
+.btn-sm,
+.btn-xs,
+.form-control {
+    border-radius: 0;
 }
-#mapstore-print-panel .modal-body {
-    max-height: ~"calc(100vh - 190px)";
-    overflow-y: auto;
-    position: relative;
+
+.map-widget {
+    height: 100%;
     width: 100%;
-    height: ~"calc(100% - 52px)";
-}
-.print-map-preview #print_preview {
-    margin: auto;
+    position: relative;
 }
 
-@media (max-width: 991px) {
-    #mapstore-print-panel.modal-dialog,
-    #measure-dialog,
-    #mapstore-about {
-        width: 700px;
+.map-ct {
+    height: 95%;
+    width: 100%;
+    margin: 0;
+}
+
+.map-panel {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.zoom-buttons {
+    margin-left: 5px;
+    position: absolute;
+    top: 5px;
+}
+
+.widget-ct {}
+
+.panel .widget.panel-body {
+    padding: 0;
+}
+
+.panel {
+    background-color: #FFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    border-radius: 0;
+    border: none;
+}
+
+.panel-default>.panel-heading {
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.label {
+    border-radius: 0;
+    margin: 0 5px;
+}
+
+/*.widget-ct .panel{
+  height: 100%;
+  width: 100%;
+}*/
+.widget {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bar-chart-ct {
+    padding: 10px;
+    height: 100%;
+}
+
+.line-chart-ct {
+    padding: 10px;
+    height: 100%;
+}
+
+.doughnut-chart-ct {
+    padding: 10px;
+    height: 100%;
+}
+
+.db-actions-ct {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    z-index: 1000;
+}
+
+.db-actions-ct .btn {
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+    width: 56px;
+    height: 56px;
+    border: none;
+    margin-bottom: 10px;
+    z-index: 1000;
+}
+
+.db-actions-ct a.btn {
+    line-height: 40px;
+}
+
+.loading {
+    border-radius: 100%;
+    border: 3px solid rgba(0, 0, 0, .1);
+    border-top-color: rgba(0, 0, 0, .45);
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    -webkit-animation: spin .7s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
     }
 }
 
-@media (max-width: 767px) {
-    #mapstore-print-panel.modal-dialog,
-    #measure-dialog,
-    #mapstore-about {
-        width: 98%;
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
+/*
+.rotating {
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
 
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}*/
+.hidden-popup {
+    display: none
+}
+
+#popup {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    background-color: #F7F7F7;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+    padding: 0px;
+    bottom: 12px;
+    left: -50px;
+    width: 280px;
+    padding: 10px;
+    border-radius: 3%
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-details-table {
+    overflow: auto;
+    min-height: 100px;
+    max-height: 250px;
+}
+
+.popup-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-wrap {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

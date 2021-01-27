@@ -23,8 +23,8 @@ var MS2_PLUGINS = {
 			"name": "BackgroundSelector",
 			"cfg": {
 				"style": {
-					"bottom": 0,
-					"marginBottom": 30
+					"bottom": 100,
+					"marginBottom": 130
 				},
 				"dimensions": {
 					"side": 65,
@@ -36,25 +36,33 @@ var MS2_PLUGINS = {
 				}
 			}
 		},
-		{
-			"name": "Identify",
-			"cfg": {
-				"showFullscreen": false,
-				"dock": true,
-				"position": "left",
-				"size": 0.4,
-				"fluid": true,
-				"viewerOptions": {
-					"container": "{context.ReactSwipe}"
-				}
-			},
-			"override": {
-				"Toolbar": {
-					"position": 11,
-					"alwaysVisible": false
-				}
-			}
-		}, {
+        {
+            "name": "Identify",
+
+            "cfg": {
+                "showFullscreen": false,
+                "dock": false,
+                // "showInMapPopup": true,
+                "position": "top",
+                "size": 0.2,
+                "fluid": true,
+                "showHighlightFeatureButton":true,
+                "disableCenterToMarker":false,
+
+
+                "viewerOptions": {
+                    "container": "{context.ReactSwipe}",
+
+
+                }
+            },
+            "override": {
+                "Toolbar": {
+                    "position": 11,
+                    "alwaysVisible": true
+                }
+            }
+        },{
 			"name": "ZoomAll",
 			"override": {
 				"Toolbar": {

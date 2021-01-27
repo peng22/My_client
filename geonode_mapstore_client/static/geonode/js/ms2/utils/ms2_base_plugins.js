@@ -1,28 +1,88 @@
-/** Base configuration for map and layer preview These are maps are shown embedded in geonode */
+/ Base configuration for map and layer preview These are maps are shown embedded in geonode /
 var MS2_BASE_PLUGINS = {
 	"desktop": [{
 			"name": "Map",
 			"cfg": {
-				"tools": ["locate", "measurement", "draw"],
-				"mapOptions": {
+                "shouldLoadFont": true,
+                "fonts": ['FontAwesome'],
+				"tools": ["locate", "measurement", "draw","overview", "scalebar"],
+                "mapOptions": {
 					"openlayers": {
 						"attribution": {
 							"container": "#footer-attribution-container"
 						},
 						"interactions": {
-							"pinchRotate": false,
+							"pinchRotate": true,
 							"altShiftDragRotate": false
 						}
 					}
-				}
+				},
+                "toolsOptions": {
+                     "scalebar": {
+                          "leaflet": {
+                               "position": "topRight"
+                           }
+                       },
+                       "overview":{
+                           "leaflet": {
+                                "position": "topRight"
+                            }
+                       }
+                   },
 			}
 		},
+            {
+              "name": "pengMap",
+              "cfg": {
+                "shouldLoadFont": true,
+                "fonts": ['FontAwesome'],
+                "tools": ["measurement", "locate", "overview", "scalebar", "draw", {
+                  "leaflet": {
+                    "name": "test",
+                    "impl": "{context.TestSupportLeaflet}"
+                  }
+                  }],
+                "toolsOptions": {
+                  "test": {
+                    "label": "Hello"
+                  }
+
+                }
+              }
+          },
+        {
+            "name": "Identify",
+
+            "cfg": {
+                "showFullscreen": true,
+                "dock": true,
+                // "showInMapPopup": true,
+                "position": "top",
+                "size": 0.2,
+                "fluid": true,
+                "showHighlightFeatureButton":true,
+                "disableCenterToMarker":false,
+
+
+                "viewerOptions": {
+                    "container": "{context.ReactSwipe}",
+
+
+                }
+            },
+            "override": {
+                "Toolbar": {
+                    "position": 11,
+                    "alwaysVisible": true
+                }
+            }
+        },
 		{
 			"name": "BackgroundSelector",
 			"cfg": {
 				"style": {
-					"bottom": 0,
-					"marginBottom": 25
+					"bottom": 100,
+					"marginBottom": 225
 				},
 				"dimensions": {
 					"side": 65,
@@ -35,31 +95,15 @@ var MS2_BASE_PLUGINS = {
 			}
 		},
 
-		{
-			"name": "Identify",
-			"cfg": {
-				"showFullscreen": false,
-				"dock": true,
-				"position": "right",
-				"size": 0.4,
-				"fluid": true,
-				"viewerOptions": {
-					"container": "{context.ReactSwipe}"
-				}
-			},
-			"override": {
-				"Toolbar": {
-					"position": 11,
-					"alwaysVisible": false
-				}
-			}
-		},
+
 		{
 			"name": "TOC",
 			"cfg": {
-				"activateMapTitle": false,
+				"activateMapTitle": true,
 				"activateMetedataTool": false,
-				"activateRemoveLayer": false
+				"activateRemoveLayer": false,
+                "activateDownloadTool":true
+
 			}
 
 		},
@@ -68,7 +112,36 @@ var MS2_BASE_PLUGINS = {
 			"cfg": {
 				"wrap": true
 			}
-		}, {
+		},
+             "GeoStory",
+             "GridContainer",
+             "Styler",
+             "StyleEditor",
+             "Snapshot",
+             "ThematicLayer",
+
+             // "Locate",
+             "Notifications",
+
+             "FloatingLegend",
+             "MapImport",
+             "Share",
+
+
+             {
+     			"name": "MapExport",
+     			"override": {
+     				"Toolbar": {
+     					"alwaysVisible": true
+     				}
+     			}
+     		},
+
+
+
+             // "Details"
+
+        {
 			"name": "Toolbar",
 			"id": "NavigationBar",
 			"cfg": {
@@ -83,10 +156,14 @@ var MS2_BASE_PLUGINS = {
 				}
 			}
 		},
-		"DrawerMenu",
+
+
+        "DrawerMenu",
+
 		"Cookie",
 		"OmniBar",
 		"Expander",
+    "ConnectedSample",
 		"Undo",
 		"Redo",
 		"BurgerMenu",
@@ -127,12 +204,15 @@ var MS2_BASE_PLUGINS = {
 			"name": "Timeline",
 			"cfg": {
 				"style": {
-					"marginBottom": 30,
-					"marginLeft": 80,
+					"marginBottom": 80,
+					"marginLeft": 30,
 					"marginRight": 45
 				},
-				"compact": true
+
+
+				"compact": false
 			}
+
 		}, "Playback"
 	]
 }

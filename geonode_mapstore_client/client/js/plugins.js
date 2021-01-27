@@ -46,20 +46,40 @@ module.exports = {
         StyleEditorPlugin: require('../MapStore2/web/client/plugins/StyleEditor'),
         TimelinePlugin: require('../MapStore2/web/client/plugins/Timeline'),
         PlaybackPlugin: require('../MapStore2/web/client/plugins/Playback'),
+        SettingsPlugin: require('../MapStore2/web/client/plugins/Settings'),
+        GeoStoryPlugin: require('../MapStore2/web/client/plugins/GeoStory'),
+        ConnectedSamplePlugin: require('../MapStore2/web/client/plugins/example'),
         MousePositionPlugin: require('../MapStore2/web/client/plugins/MousePosition'),
         SearchPlugin: require('../MapStore2/web/client/plugins/Search'),
+
+        StylerPlugin: require('../MapStore2/web/client/plugins/Styler'),
+        SnapshotPlugin: require('../MapStore2/web/client/plugins/Snapshot'),
+        ThematicLayerPlugin: require('../MapStore2/web/client/plugins/ThematicLayer'),
+        TutorialPlugin: require('../MapStore2/web/client/plugins/Tutorial'),
+        LocatePlugin: require('../MapStore2/web/client/plugins/Locate'),
+        MapImportPlugin: require('../MapStore2/web/client/plugins/MapImport'),
+        SharePlugin: require('../MapStore2/web/client/plugins/Share'),
+
+
+        FloatingPlugin: require('../MapStore2/web/client/plugins/FloatingLegend'),
+        RulesEditorPlugin: require('../MapStore2/web/client/plugins/RulesEditor'),
+
+
+
         SearchServicesConfigPlugin: require('../MapStore2/web/client/plugins/SearchServicesConfig'),
         AddReducersAndEpics: {
             reducers: {
                 security: require('../MapStore2/web/client/reducers/security'),
                 maps: require('../MapStore2/web/client/reducers/maps'),
                 currentMap: require('../MapStore2/web/client/reducers/currentMap'),
-                maplayout: require('../MapStore2/web/client/reducers/maplayout')
+                // maplayout: require('../MapStore2/web/client/reducers/maplayout'),
+                mapPopups: require('../MapStore2/web/client/reducers/mapPopups')
             },
             epics
         }
     },
     requires: {
+        // DrawSupportLeaflet: require('../components/map/leaflet/DrawSupport'),
         ReactSwipe: require('react-swipeable-views').default,
         SwipeHeader: require('../MapStore2/web/client/components/data/identify/SwipeHeader')
     }

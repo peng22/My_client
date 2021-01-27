@@ -20597,72 +20597,191 @@ Ported to CodeMirror by Peter Kroon
 }
 /* mapstore2 variables */
 /* override bootstrap variables */
-.msgapi .btn-group-vertical > .btn:first-child:not(:last-child) {
-  border-top-left-radius: 0px;
+.msgapi .check {
+  opacity: 0.5;
+  color: #996;
 }
-.msgapi .btn-group-vertical > .btn:last-child:not(:first-child) {
-  border-bottom-right-radius: 0px;
+.msgapi .box {
+  margin-bottom: 5px;
 }
-.msgapi .modal-dialog.modal-content.modal-dialog-container.react-draggable {
+.msgapi body {
+  background-color: #f0f0f0;
+}
+.msgapi body.edit-mode {
+  padding-top: 60px;
+}
+.msgapi .btn,
+.msgapi .btn-sm,
+.msgapi .btn-xs,
+.msgapi .form-control,
+.msgapi .btn-group-xs > .btn,
+.msgapi .btn-group-sm > .btn {
+  border-radius: 0;
+}
+.msgapi .map-widget {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.msgapi .map-ct {
+  height: 95%;
+  width: 100%;
+  margin: 0;
+}
+.msgapi .map-panel {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.msgapi .zoom-buttons {
+  margin-left: 5px;
+  position: absolute;
+  top: 5px;
+}
+.msgapi .panel .widget.panel-body {
+  padding: 0;
+}
+.msgapi .panel {
+  background-color: #FFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 0;
+  border: none;
+}
+.msgapi .panel-default > .panel-heading {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 15px;
+}
+.msgapi .label {
+  border-radius: 0;
+  margin: 0 5px;
+}
+/*.widget-ct .panel{
+  height: 100%;
+  width: 100%;
+}*/
+.msgapi .widget {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.msgapi .bar-chart-ct {
+  padding: 10px;
+  height: 100%;
+}
+.msgapi .line-chart-ct {
+  padding: 10px;
+  height: 100%;
+}
+.msgapi .doughnut-chart-ct {
+  padding: 10px;
+  height: 100%;
+}
+.msgapi .db-actions-ct {
   position: fixed;
-  z-index: 100000 !important;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  z-index: 1000;
 }
-.msgapi .gfi-t {
-  float: left;
-  padding: 1px;
+.msgapi .db-actions-ct .btn {
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  width: 56px;
+  height: 56px;
+  border: none;
+  margin-bottom: 10px;
+  z-index: 1000;
 }
-.msgapi .fill:not(:-webkit-full-screen) .notifications-tc,
-.msgapi .fill:not(:-webkit-full-screen) .notifications-tl,
-.msgapi .fill:not(:-webkit-full-screen) .notifications-tr {
-  top: 63px !important;
+.msgapi .db-actions-ct a.btn {
+  line-height: 40px;
 }
-.msgapi .catalog-panel > .panel-body form .form-group:first-child,
-.msgapi .catalog-panel > .panel-body form .form-group:first-child + .form-group {
+.msgapi .loading {
+  border-radius: 100%;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-top-color: rgba(0, 0, 0, 0.45);
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  -webkit-animation: spin .7s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  .msgapi 100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*
+.rotating {
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}*/
+.msgapi .hidden-popup {
   display: none;
 }
-.msgapi .notifications-tc,
-.msgapi .notifications-tl,
-.msgapi .notifications-tr {
-  top: 0px !important;
-}
-.msgapi .mapstore2-embedded .background-plugin-position {
-  position: fixed;
-}
-.msgapi .mapstore2-embedded .mapToolbar {
-  position: fixed;
-}
-.msgapi .timeline-plugin {
-  position: fixed !important;
-}
-.msgapi #mapstore-print-panel.modal-dialog,
-.msgapi #measure-dialog,
-.msgapi #mapstore-about {
-  height: 400px;
-  width: 800px;
+.msgapi #popup {
   position: absolute;
+  z-index: 1000;
+  display: none;
+  background-color: #F7F7F7;
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+  padding: 0px;
+  bottom: 12px;
+  left: -50px;
+  width: 280px;
+  padding: 10px;
+  border-radius: 3%;
 }
-.msgapi #mapstore-print-panel .modal-body {
-  max-height: calc(100vh - 190px);
-  overflow-y: auto;
-  position: relative;
-  width: 100%;
-  height: calc(100% - 52px);
+.msgapi .popup-content {
+  display: flex;
+  flex-direction: column;
 }
-.msgapi .print-map-preview #print_preview {
-  margin: auto;
+.msgapi .feature-details-table {
+  overflow: auto;
+  min-height: 100px;
+  max-height: 250px;
 }
-@media (max-width: 991px) {
-  .msgapi #mapstore-print-panel.modal-dialog,
-  .msgapi #measure-dialog,
-  .msgapi #mapstore-about {
-    width: 700px;
-  }
+.msgapi .popup-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media (max-width: 767px) {
-  .msgapi #mapstore-print-panel.modal-dialog,
-  .msgapi #measure-dialog,
-  .msgapi #mapstore-about {
-    width: 98%;
-  }
+.msgapi .text-wrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 

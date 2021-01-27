@@ -22,7 +22,7 @@ module.exports = {
         ExpanderPlugin: require('../MapStore2/web/client/plugins/Expander'),
         BurgerMenuPlugin: require('../MapStore2/web/client/plugins/BurgerMenu'),
         ScaleBoxPlugin: require('../MapStore2/web/client/plugins/ScaleBox'),
-        MapFooterPlugin: require('../MapStore2/web/client/plugins/MapFooter'),
+        // MapFooterPlugin: require('../MapStore2/web/client/plugins/MapFooter'),
         PrintPlugin: require('../MapStore2/web/client/plugins/Print'),
         TimelinePlugin: require('../MapStore2/web/client/plugins/Timeline'),
         PlaybackPlugin: require('../MapStore2/web/client/plugins/Playback'),

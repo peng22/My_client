@@ -2,21 +2,34 @@
 var MS2_MAP_PLUGINS = {
 	"desktop": [
 		// Map from base
-		"BackgroundSelector",
-		{
-			"name": "Identify",
-			"cfg": {
-				"viewerOptions": {
-					"container": "{context.ReactSwipe}"
-				}
-			},
-			"override": {
-				"Toolbar": {
-					"position": 11,
-					"alwaysVisible": false
-				}
-			}
-		},
+		// "BackgroundSelector",
+        {
+            "name": "Identify",
+
+            "cfg": {
+                "showFullscreen": false,
+                "dock": false,
+                // "showInMapPopup": true,
+                "position": "top",
+                "size": 0.2,
+                "fluid": true,
+                "showHighlightFeatureButton":true,
+                "disableCenterToMarker":false,
+
+
+                "viewerOptions": {
+                    "container": "{context.ReactSwipe}",
+
+
+                }
+            },
+            "override": {
+                "Toolbar": {
+                    "position": 11,
+                    "alwaysVisible": true
+                }
+            }
+        },
 		{
 			"name": "TOC",
 			"cfg": {
