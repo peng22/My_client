@@ -48,7 +48,6 @@ module.exports = {
         PlaybackPlugin: require('../MapStore2/web/client/plugins/Playback'),
         SettingsPlugin: require('../MapStore2/web/client/plugins/Settings'),
         GeoStoryPlugin: require('../MapStore2/web/client/plugins/GeoStory'),
-        ConnectedSamplePlugin: require('../MapStore2/web/client/plugins/example'),
         MousePositionPlugin: require('../MapStore2/web/client/plugins/MousePosition'),
         SearchPlugin: require('../MapStore2/web/client/plugins/Search'),
 
